@@ -1,0 +1,16 @@
+name: 'setup-skopeo'
+description: 'Install a version of Skopeo'
+inputs:
+  skopeo-version:  
+    description: 'What version of Skopeo to install'
+    required: false
+    default: 'v1.13.3'
+  skopeo-url:
+    description: 'The url to download Skopeo from'
+    required: false
+    default: 'https://github.com/lework/skopeo-binary/releases/download/{version}/skopeo-{platform}-{arch}'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+icon: book-open
+color: '#FFFF00'
